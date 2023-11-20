@@ -82,31 +82,59 @@ function Retocolores() {
 
   }
 
-  function handleColorClick(clickedColor: Color){
+
+  function handleColorClick(clickedColor: Color) {
     const penalty = DifficultyRules[selectedDifficulty].penalty;
-    if(clickedColor.correct){
-      setScore((score)=> score +1 )
-    }else{
+  
+    if (clickedColor.correct) {
+      setScore((score) => score + 1);
+    } else {
       if (selectedDifficulty === Difficulty.VeryHard) {
         setScore(0); // Reiniciar el puntaje a 0 en dificultad "Muy difícil"
-      }else{
+        setStatus('finished'); // Cambiar a estado 'finished' inmediatamente en dificultad "Muy difícil"
+      } else {
         setScore((score) => Math.max(0, score - penalty));
-      }
-      if(score === 0 ){
-        setStatus('finished')
+        if (score === 1) {
+          setStatus('finished');
+        }
       }
     }
+  
+    const [correctColor, wrongColor] = colors.slice().sort(() => Math.random() - 0.5);
+    setGamecolors([{ ...correctColor, correct: true }, wrongColor].sort(() => Math.random() - 0.5));
+  
+    if (score === 9) {
+      setStatus('finished');
+      // saveHighScore(time);
+    }
+  }
+  
 
-    const [correctColor, wrongColor] = colors.slice().sort(()=> Math.random() - 0.5)
-    setGamecolors([{...correctColor, correct:true}, wrongColor].sort(()=>Math.random()-0.5))
+  // function handleColorClick(clickedColor: Color){
+  //   const penalty = DifficultyRules[selectedDifficulty].penalty;
+  //   if(clickedColor.correct){
+  //     setScore((score)=> score +1 )
+  //   }else{
+  //     if (selectedDifficulty === Difficulty.VeryHard) {
+  //       setScore(0); // Reiniciar el puntaje a 0 en dificultad "Muy difícil"
+  //     }else{
+  //       setScore((score) => Math.max(0, score - penalty));
+  //     }
+  //     if(score === 1 ){
+  //       setStatus('finished')
+  //     }
+  //   }
+
+  //   const [correctColor, wrongColor] = colors.slice().sort(()=> Math.random() - 0.5)
+  //   setGamecolors([{...correctColor, correct:true}, wrongColor].sort(()=>Math.random()-0.5))
     
 
-    if(score === 9){
-      setStatus("finished")
-      saveHighScore(time);
-    }
+  //   if(score === 9){
+  //     setStatus("finished")
+  //     saveHighScore(time);
+  //   }
 
-  }
+  // }
 
   // function saveHighScore() {
   //   const updatedHighScores = [...highScores, time].sort((a, b) => a - b).slice(0, 10);

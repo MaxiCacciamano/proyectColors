@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Difficulty, DifficultyRules } from './Difficulty'; // Asegúrate de importar las reglas de dificultad
 import Swal from 'sweetalert2'
 import './Game.css'
