@@ -142,21 +142,21 @@ function Retocolores() {
   //   // localStorage para persistir los puntajes más altos.
   //   localStorage.setItem('highScores', JSON.stringify(updatedHighScores));
   // }
-  function saveHighScore() {
-    setHighScores((prevHighScores) => {
-      const updatedHighScores = [...prevHighScores, time].sort((a, b) => a - b).slice(0, 10);
-      // localStorage para persistir los puntajes más altos.
-      localStorage.setItem('highScores', JSON.stringify(updatedHighScores));
-      return updatedHighScores;
-    });
-  }
+  // function saveHighScore() {
+  //   setHighScores((prevHighScores) => {
+  //     const updatedHighScores = [...prevHighScores, time].sort((a, b) => a - b).slice(0, 10);
+  //     // localStorage para persistir los puntajes más altos.
+  //     localStorage.setItem('highScores', JSON.stringify(updatedHighScores));
+  //     return updatedHighScores;
+  //   });
+  // }
   
   
 
-  function clearHighScores() {
-    localStorage.removeItem('highScores');
-    setHighScores([]); // Esto también limpia el estado de highScores en tu aplicación
-  }
+  // function clearHighScores() {
+  //   localStorage.removeItem('highScores');
+  //   setHighScores([]); // Esto también limpia el estado de highScores en tu aplicación
+  // }
 
   
 
