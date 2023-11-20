@@ -1,0 +1,39 @@
+[
+    {
+        "name":"rojo",
+        "color":"#F31559"
+    },
+    {
+        "name":"verde",
+        "color":"#367E18"
+    },
+    {
+        "name":"amarillo",
+        "color":"#FFF200"
+    },
+    {
+        "name":"purpura",
+        "color":"#35155D"
+    },
+    {
+        "name":"gris",
+        "color":"#A6A9B6"
+    },
+    {
+        "name":"naranja",
+        "color":"#ED7D31"
+    },
+    {
+        "name":"negro",
+        "color":"#0F0F0F"
+
+    },
+    {
+        "name":"celeste",
+        "color":"#78C1F3"
+    },
+    {
+        "name":"marron",
+        "color":"#765827"
+    }
+]

@@ -1,0 +1,31 @@
+.game{
+    text-align: left;
+    width: 400px;
+    margin: 0 auto;
+}
+.game h1{
+    padding: 20px;
+}
+
+.game ul li{
+    list-style: none;
+    padding: 0.1em;
+}
+
+.game button{
+    background-color:aliceblue;
+    color: black;
+}
+
+.game button:hover{
+    background-color: antiquewhite;
+}
+
+.game input{
+    margin: 10px;
+}
+
+.comenzar button{
+    padding: 0.6em 1.2em;
+    text-align: center;
+}
